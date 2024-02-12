@@ -26,17 +26,25 @@ public class AuthControllers {
 	private JWTUtil jwtUtil;
 
 	@RequestMapping(value = "api/login", method = RequestMethod.POST)
-	public String login(@RequestBody User user, @RequestBody PyUser pyUser) {
+	public String login(@RequestBody User user) {
+		
 		
 		User userLog = userDao.verification(user);
+		
 		if (userLog != null) {
 			
 			String tokenJwt = jwtUtil.create(String.valueOf(userLog.getId()), userLog.getMail());
 			
 			return tokenJwt;
 		}
+		return "Fail";
+	}
+	
+	@RequestMapping(value = "api/pylogin", method = RequestMethod.POST)
+	public String pyLogin(@RequestBody PyUser pyUser) {
 		
 		PyUser pyUserLog = pyUserDao.pyVerification(pyUser);
+		
 		if (pyUserLog != null) {
 			
 			String tokenJwt = jwtUtil.create(String.valueOf(pyUserLog.getPyId()), pyUserLog.getPyNit());
@@ -45,17 +53,9 @@ public class AuthControllers {
 		}
 		return "Fail";
 	}
-	
-//	@RequestMapping(value = "api/login", method = RequestMethod.POST)
-//	public String pyLogin(@RequestBody PyUser pyUser) {
-//		
-//		PyUser pyUserLog = pyUserDao.pyVerification(pyUser);
-//		if (pyUserLog != null) {
-//			
-//			String tokenJwt = jwtUtil.create(String.valueOf(pyUserLog.getPyId()), pyUserLog.getPyNit());
-//			
-//			return tokenJwt;
-//		}
-//		return "Fail";
-//	}
 }
+
+
+
+
+

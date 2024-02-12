@@ -13,17 +13,16 @@ loginBtn.addEventListener('click', () => {
 
 // ----------------------------------------------
 
-$(document).ready(function() {
 
-});
+async function pyLogin(e) {
+	e.preventDefault();
 
-async function pyLogin() {
 	
 	let data = {	};
 	data.pyNit = document.getElementById('txtNit').value;
-	data.pyPassword = document.getElementById('txtPassword').value;
+	data.pyPassword = document.getElementById('txtPyPassword').value;
 	
-  const request = await fetch('/api/login', {
+  const request = await fetch('/api/pylogin', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -34,8 +33,8 @@ async function pyLogin() {
   
   const response = await request.text();
     if (response != "Fail"){
-		localStorage.token = response;
-		localStorage.email = data.pyNit;
+		localStorage.setItem("token", response)
+		localStorage.setItem("nit", data.pyNit)
 		window.location.href = "pyusers.html";
 	} else {
 		alert ("Inicio de sesión incorrecto. Inténtelo nuevamente.")
@@ -43,9 +42,8 @@ async function pyLogin() {
 
 };
 
-async function login() {
-	
-	console.log("Hola");
+async function login(e) {
+	e.preventDefault();
 	
 	let data = {	};
 	data.mail = document.getElementById('txtEmail').value;
@@ -69,6 +67,8 @@ async function login() {
 		alert ("Inicio de sesión incorrecto. Inténtelo nuevamente.")
 	}
 };
+
+const goRegister = () => window.location.href = "register.html";
 
 
 
