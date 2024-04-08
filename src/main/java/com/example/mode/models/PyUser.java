@@ -10,11 +10,16 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+<<<<<<< HEAD
 @Table(name = "pymes_users")
+=======
+@Table(name = "pymesUsers")
+>>>>>>> abfd7c7e9e41c5da5079c6298d9d0fe57ed1010e
 public class PyUser {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+<<<<<<< HEAD
 	@Getter @Setter @Column(name="pymes_id")
 	private Long pyId;
 	
@@ -28,6 +33,21 @@ public class PyUser {
 	private String pyNumber;
 	
 	@Getter @Setter @Column(name="pymes_password")
+=======
+	@Getter @Setter @Column(name="pymesId")
+	private Long pyId;
+	
+	@Getter @Setter @Column(name="pymesName")
+	private String pyName;
+	
+	@Getter @Setter @Column(name="pymesNit")
+	private String pyNit;
+	
+	@Getter @Setter @Column(name="pymesNumber")
+	private String pyNumber;
+	
+	@Getter @Setter @Column(name="pymesPassword")
+>>>>>>> abfd7c7e9e41c5da5079c6298d9d0fe57ed1010e
 	private String pyPassword;
 
 	
