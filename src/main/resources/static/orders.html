@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Título bien cool xd</title>
+        
+        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="css/orders.css" rel="stylesheet">
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <div class="big-container">
+        
+        	<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Zuppym </div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>INICIO</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="orders.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Crea tu pastel</span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="users.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Usuarios</span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="pyusers.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Usuarios Pymes</span></a>
+            </li>
+
+           
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+            <div class="another-container fade-in" id="page-a" sytle="display: flex;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/fantasma.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">De que sabor quieres tu pastel?</p>
+                       <div class="custom-button page-one" data-info="Vainilla">
+                            <p>Vainilla</p>
+                       </div>
+                       <div class="custom-button page-one" data-info="Chocolate">
+                            <p>Chocolate</p>
+                       </div>
+                       <div class="custom-button page-one" data-info="Naranja">
+                            <p>Naranja</p>
+                       </div>
+                       <div class="custom-button page-one" data-info="Maracuya">
+                            <p>Maracuya</p>
+                       </div>
+                    </div>
+                    <div class="down-container-a">
+                        <button onclick="goPageB()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            <div class="another-container fade-out" id="page-b" style="display: none;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/delete.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">Que relleno quieres en tu pastel?</p>
+                        <div class="custom-button page-two" data-info="Arequipe">
+                            <p>Arequipe</p>
+                       </div>
+                       <div class="custom-button page-two" data-info="Chocolate">
+                            <p>Chocolate</p>
+                       </div>
+                       <div class="custom-button page-two" data-info="Nutella">
+                            <p>Nutella</p>
+                       </div>
+                       <div class="custom-button page-two" data-info="Chantilly">
+                            <p>Chantilly</p>
+                       </div>
+                    </div>
+                    <div class="down-container">
+                        <button class="backward" onclick="goPageA()"> Atrás </button>
+                        <button class="forward" onclick="goPageC()">Adelante</button>
+                    </div>
+                </div>
+            </div>
+            <div class="another-container fade-out" id="page-c" style="display: none;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/delete.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">Que glaseado quieres en tu pastel?</p>
+                        <div class="custom-button page-three" data-info="Glaseado de Queso Crema">
+                            <p>Glaseado de Queso Crema</p>
+                       </div>
+                       <div class="custom-button page-three" data-info="Chocolate">
+                            <p>Chocolate</p>
+                       </div>
+                       <div class="custom-button page-three" data-info="Crema de Mantequilla">
+                            <p>Crema de Mantequilla</p>
+                       </div>
+                       <div class="custom-button page-three" data-info="Chantilly">
+                            <p>Chantilly</p>
+                       </div>
+                    </div>
+                    <div class="down-container">
+                        <button class="backward" onclick="goPageB()">Atrás</button>
+                        <button class="forward" onclick="goPageD()">Adelante</button>
+                    </div>
+                </div>
+            </div>
+            <div class="another-container fade-out" id="page-d" style="display: none;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/delete.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">¿Cuáles Toppings desea en su pastel?</p>
+                        <div class="custom-button page-four" data-info="Galletas Oreo">
+                            <p>Galletas Oreo</p>
+                       </div>
+                       <div class="custom-button page-four" data-info="Gomitas">
+                            <p>Gomitas</p>
+                       </div>
+                       <div class="custom-button page-four" data-info="Barquillos">
+                            <p>Barquillos</p>
+                       </div>
+                       <div class="custom-button page-four" data-info="Chocolatinas">
+                            <p>Chocolatinas</p>
+                       </div>
+                    </div>
+                    <div class="down-container">
+                        <button class="backward" onclick="goPageC()"> Atrás </button>
+                        <button class="forward" onclick="goPageE()">Adelante</button>
+                    </div>
+                </div>
+            </div>
+            <div class="another-container fade-out" id="page-e" style="display: none;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/delete.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">¿Tienes algun requerimiento extra para tu pastel?</p>
+                        <div class="page-four" data-info="Galletas Oreo">
+                            <input type="text" id="miInput" class="input-grande" placeholder="Input grande">
+                       </div>
+
+                    </div>
+                    <div class="down-container">
+                        <button class="backward" onclick="goPageD()">Atrás</button>
+                        <button class="forward" >Adelante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/orders.js"></script>
+</html>
+
+
+ 
