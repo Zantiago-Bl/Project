@@ -3,6 +3,7 @@ var pageB = document.getElementById("page-b");
 var pageC = document.getElementById("page-c");
 var pageD = document.getElementById("page-d");
 var pageE= document.getElementById("page-e");
+var pageF= document.getElementById("page-f");
 const customButtons = document.querySelectorAll('.custom-button');
 let responses = {
     pageOne: "",
@@ -68,11 +69,25 @@ function goPageD() {
 function goPageE() {
     pageD.classList.remove("fade-in");
     pageD.classList.add("fade-out");
+    pageF.classList.remove("fade-in");
+    pageF.classList.add("fade-out");
     setTimeout(() => {
         pageD.style.display = "none";
+        pageF.style.display = "none";
         pageE.style.display = "flex";
         pageE.classList.remove("fade-out");
         pageE.classList.add("fade-in");
+    }, 500);
+}
+
+function goPageF() {
+    pageE.classList.remove("fade-in");
+    pageE.classList.add("fade-out");
+    setTimeout(() => {
+        pageE.style.display = "none";
+        pageF.style.display = "flex";
+        pageF.classList.remove("fade-out");
+        pageF.classList.add("fade-in");
     }, 500);
 }
 
@@ -104,10 +119,20 @@ const algo = (e) => {
             console.log("desde 4", e.currentTarget);
             responses.pageFour = e.currentTarget.getAttribute('data-info');
         };
+        
+    	
+       getInput();
     
     console.log(responses);
 }
 
+const getInput = () => {
+	console.log("Desde la función xd");
+	if(document.getElementById("description").value){
+		console.log("Desde el if de la función xd");
+		responses.pageFive = document.getElementById("description").value;
+	}
+}
 
 customButtons.forEach(button => {
     button.addEventListener('click', algo);

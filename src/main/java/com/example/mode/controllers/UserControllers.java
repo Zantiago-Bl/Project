@@ -43,11 +43,8 @@ public class UserControllers {
 	@RequestMapping(value = "api/users", method = RequestMethod.GET)
 	public List<User> getUsers(@RequestHeader(value="Authorization") String token) {
 		
-<<<<<<< HEAD
 		if (!tokenValidation(token) || tokenValidation(token)) {return null;};
-=======
 		if (!tokenValidation(token)) {return null;};
->>>>>>> abfd7c7e9e41c5da5079c6298d9d0fe57ed1010e
 		
 		return userDao.getUsers();
 	}

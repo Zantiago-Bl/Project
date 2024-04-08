@@ -167,14 +167,34 @@
                 <div class="right-container">
                     <div class="up-container">
                         <p class="question">¿Tienes algun requerimiento extra para tu pastel?</p>
-                        <div class="page-four" data-info="Galletas Oreo">
-                            <input type="text" id="miInput" class="input-grande" placeholder="Input grande">
+                        <div class="page-five">
+                            <textarea id="description" ></textarea>
+                            <br>
+                            <button class="btn-func"onclick="getInput()"> Guardar</button>
                        </div>
 
                     </div>
                     <div class="down-container">
                         <button class="backward" onclick="goPageD()">Atrás</button>
-                        <button class="forward" >Adelante</button>
+                        <button class="forward" onclick="goPageF()">Adelante</button>
+                    </div>
+                </div>
+            </div>
+            <div class="another-container fade-out" id="page-f" style="display: none;">
+                <div class="left-container">
+                    <img class="ghost-img" src="img/delete.png">
+                </div>
+                <div class="right-container">
+                    <div class="up-container">
+                        <p class="question">¿Tienes algun requerimiento extra para tu pastel?</p>
+                        <div class="page-six" >
+                            <p> No se xd</p>
+                       </div>
+
+                    </div>
+                    <div class="down-container">
+                        <button class="backward" onclick="goPageE()">Atrás</button>
+                        <button class="forward" onclick="">Adelante</button>
                     </div>
                 </div>
             </div>

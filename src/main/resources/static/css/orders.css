@@ -141,3 +141,18 @@ button:hover{
     margin-bottom: 20px;
 }
 
+textarea {
+    vertical-align: top;
+    height: 100px;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.btn-func{
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
