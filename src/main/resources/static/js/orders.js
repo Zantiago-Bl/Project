@@ -256,8 +256,8 @@ const addToCartAndGo = () => {
 function proceedToCheckout() {
     
     alert("¡Gracias por tu compra! El pago ha sido procesado exitosamente.");
-    
-    window.location.href = "confirmacion_pedido.html";
+    goBackend();
+    window.location.href = "index.html";
 }
 
 function addProductToCart(productName, price) {
@@ -274,6 +274,8 @@ function addProductToCart(productName, price) {
     `;
 }
 
+
+
 function renderCart() {
     cartTableBody.innerHTML = '';
 
@@ -286,4 +288,34 @@ function renderCart() {
         `;
     });
 }
+
+const goBackend = () => {
+    const url = '/cart/checkout';
+    const dataCart = {
+        items: cart 
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+	        'Content-Type': 'application/json',
+	        'Authorization': localStorage.token
+        },
+        body: JSON.stringify(dataCart)
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Error al enviar el carrito al backend.');
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+};
+
 

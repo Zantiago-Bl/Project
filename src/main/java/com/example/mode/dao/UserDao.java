@@ -13,4 +13,6 @@ public interface UserDao {
 
 	User verification(User user);
 
+	User getUserById(Long id);
+
 }

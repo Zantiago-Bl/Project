@@ -94,4 +94,10 @@ public class JWTUtil {
 
         return claims.getId();
     }
+    
+    public String extractClientId(String jwt) {
+        Claims claims = Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(key)).parseClaimsJws(jwt).getBody();
+        return claims.getSubject();
+    }
+    
 }
