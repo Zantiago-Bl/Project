@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Título bien cool xd</title>
+        <title>Crea tu pastel</title>
         
+        <meta charset="UTF-8">
         <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         <link href="css/orders.css" rel="stylesheet">
@@ -59,46 +60,46 @@
         </ul>
             <div class="another-container fade-in" id="page-a" sytle="display: flex;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/fantasma.png">
+                    <img class="images-cakes" src="img/flavors.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
-                        <p class="question">De que sabor quieres tu pastel?</p>
-                       <div class="custom-button page-one" data-info="Vainilla">
+                        <p class="question">¿De qué sabor quieres tu pastel?</p>
+                       <div class="custom-button page-one" data-info="Vainilla" data-price="20000">
                             <p>Vainilla</p>
                        </div>
-                       <div class="custom-button page-one" data-info="Chocolate">
+                       <div class="custom-button page-one" data-info="Chocolate" data-price="20000">
                             <p>Chocolate</p>
                        </div>
-                       <div class="custom-button page-one" data-info="Naranja">
+                       <div class="custom-button page-one" data-info="Naranja" data-price="25000">
                             <p>Naranja</p>
                        </div>
-                       <div class="custom-button page-one" data-info="Maracuya">
-                            <p>Maracuya</p>
+                       <div class="custom-button page-one" data-info="Maracuya" data-price="25000">
+                            <p>Maracuyá</p>
                        </div>
                     </div>
                     <div class="down-container-a">
-                        <button onclick="goPageB()">Siguiente</button>
+                        <button class="forward" onclick="goPageB()">Adelante</button>
                     </div>
                 </div>
             </div>
             <div class="another-container fade-out" id="page-b" style="display: none;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/delete.png">
+                    <img class="images-cakes" src="img/stuffed.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
-                        <p class="question">Que relleno quieres en tu pastel?</p>
-                        <div class="custom-button page-two" data-info="Arequipe">
+                        <p class="question">¿Qué relleno quieres en tu pastel?</p>
+                        <div class="custom-button page-two" data-info="Arequipe" data-price="5000">
                             <p>Arequipe</p>
                        </div>
-                       <div class="custom-button page-two" data-info="Chocolate">
+                       <div class="custom-button page-two" data-info="Chocolate" data-price="10000">
                             <p>Chocolate</p>
                        </div>
-                       <div class="custom-button page-two" data-info="Nutella">
+                       <div class="custom-button page-two" data-info="Nutella" data-price="15000">
                             <p>Nutella</p>
                        </div>
-                       <div class="custom-button page-two" data-info="Chantilly">
+                       <div class="custom-button page-two" data-info="Chantilly" data-price="10000">
                             <p>Chantilly</p>
                        </div>
                     </div>
@@ -110,21 +111,21 @@
             </div>
             <div class="another-container fade-out" id="page-c" style="display: none;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/delete.png">
+                    <img class="images-cakes" src="img/glazed.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
-                        <p class="question">Que glaseado quieres en tu pastel?</p>
-                        <div class="custom-button page-three" data-info="Glaseado de Queso Crema">
+                        <p class="question">¿Qué glaseado quieres en tu pastel?</p>
+                        <div class="custom-button page-three" data-info="Glaseado de Queso Crema" data-price="10000">
                             <p>Glaseado de Queso Crema</p>
                        </div>
-                       <div class="custom-button page-three" data-info="Chocolate">
+                       <div class="custom-button page-three" data-info="Chocolate" data-price="10000">
                             <p>Chocolate</p>
                        </div>
-                       <div class="custom-button page-three" data-info="Crema de Mantequilla">
+                       <div class="custom-button page-three" data-info="Crema de Mantequilla" data-price="10000">
                             <p>Crema de Mantequilla</p>
                        </div>
-                       <div class="custom-button page-three" data-info="Chantilly">
+                       <div class="custom-button page-three" data-info="Chantilly" data-price="10000">
                             <p>Chantilly</p>
                        </div>
                     </div>
@@ -136,21 +137,21 @@
             </div>
             <div class="another-container fade-out" id="page-d" style="display: none;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/delete.png">
+                    <img class="images-cakes" src="img/toppings.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
                         <p class="question">¿Cuáles Toppings desea en su pastel?</p>
-                        <div class="custom-button page-four" data-info="Galletas Oreo">
+                        <div class="custom-button page-four" data-info="Galletas Oreo" data-price="7000">
                             <p>Galletas Oreo</p>
                        </div>
-                       <div class="custom-button page-four" data-info="Gomitas">
+                       <div class="custom-button page-four" data-info="Gomitas" data-price="7000">
                             <p>Gomitas</p>
                        </div>
-                       <div class="custom-button page-four" data-info="Barquillos">
+                       <div class="custom-button page-four" data-info="Barquillos" data-price="10000">
                             <p>Barquillos</p>
                        </div>
-                       <div class="custom-button page-four" data-info="Chocolatinas">
+                       <div class="custom-button page-four" data-info="Chocolatinas" data-price="15000">
                             <p>Chocolatinas</p>
                        </div>
                     </div>
@@ -162,11 +163,11 @@
             </div>
             <div class="another-container fade-out" id="page-e" style="display: none;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/delete.png">
+                    <img class="images-cakes" src="img/description.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
-                        <p class="question">¿Tienes algun requerimiento extra para tu pastel?</p>
+                        <p class="question">¿Tienes algun requerimiento extra para tu pastel? (Opcional)</p>
                         <div class="page-five">
                             <textarea id="description" ></textarea>
                             <br>
@@ -182,22 +183,42 @@
             </div>
             <div class="another-container fade-out" id="page-f" style="display: none;">
                 <div class="left-container">
-                    <img class="ghost-img" src="img/delete.png">
+                    <img class="images-cakes" src="img/cheked.jpeg">
                 </div>
                 <div class="right-container">
                     <div class="up-container">
-                        <p class="question">¿Tienes algun requerimiento extra para tu pastel?</p>
-                        <div class="page-six" >
-                            <p> No se xd</p>
+                    	<p id="total-price" style="margin-bottom: 50px; font-size: 20px">Precio de tu pastel: </p>
+                        <p class="question" style="margin-bottom: 150px">¿Qué deseas hacer?</p>
+                        <div class="down-container" >                
+                        	<button class="add-cart" onclick="addToCartAndGo()">Añadir e ir al Carrito</button>
                        </div>
-
+						
                     </div>
                     <div class="down-container">
                         <button class="backward" onclick="goPageE()">Atrás</button>
-                        <button class="forward" onclick="">Adelante</button>
+                        <button class="forward" onclick="discard()">Descartar</button>
                     </div>
                 </div>
             </div>
+            <div class="another-container fade-out" id="page-g" style="display: none;">
+			    <div class="left-container">
+			        <div id="cart-container">
+			            <p id="total-price" style="margin-bottom: 20px;">Precio total del pedido:</p> <!-- Aquí se mostrará el precio total -->
+			            <table id="cart-table">
+			                <thead>
+			                    <tr>
+			                        <th>Producto</th>
+			                        <th>Precio</th>
+			                        <th>Acción</th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+			                </tbody>
+			            </table>
+			        </div>
+			        <button id="checkout-button" onclick="proceedToCheckout()">Pagar</button>
+			    </div>
+			</div>
         </div>
     </body>
     <script src="vendor/jquery/jquery.min.js"></script>

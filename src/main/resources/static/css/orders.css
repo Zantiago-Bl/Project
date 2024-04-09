@@ -35,10 +35,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 95%;
     width: 70%;
-/*     border: 3px aquamarine solid;
- */    padding: 10px;
+	padding: 10px;
     margin-right: 10px;
     border-radius: 10px;
     box-shadow: 0px 5px 5px -3px black;
@@ -63,9 +63,8 @@ body{
 .up-container{
     height: 70%;
     width: 95%;
-/*     border: 3px black solid;
- */    display: flex;
-    justify-content: center;
+	display: flex;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     text-align: center;
@@ -112,6 +111,9 @@ button:hover{
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
     font-size: 20px;
     box-shadow: 3px 3px 10px 3px gray;
     margin-top: 10px;
@@ -143,8 +145,8 @@ button:hover{
 
 textarea {
     vertical-align: top;
-    height: 100px;
-    width: 200px;
+    height: 90%;
+    width: 90%;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -156,3 +158,44 @@ textarea {
 	border-radius: 10px;
 }
 
+.images-cakes{
+	width: 90%;
+	height: 90%;
+	border-radius: 10px;
+}
+
+.backward{
+	border-radius: 10px;
+}
+
+.forward{
+	border-radius: 10px;
+}
+
+.card-btn{
+	margin: 0px;
+	width: 100px;
+	height: 30px;
+	border-radius: 10px;
+	border-color: #ccc;
+}
+
+.card-btn-div{
+	width: 90%; 
+	display: start;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-bottom: 5px; 
+}
+
+.add-cart{
+	height: 80px;
+	width: 180px;
+	border-radius: 10px;
+}
+
+.new-add-cart{
+	height: 80px;
+	width: 180px;
+	border-radius: 10px;
+}
